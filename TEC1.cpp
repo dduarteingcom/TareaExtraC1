@@ -1,7 +1,10 @@
 #include <iostream>
-
+//aafdgdfg
+//dfasdf
+int a;
 class Node{
     public:
+    
      int data;
      Node * next;
      Node(){
@@ -25,6 +28,7 @@ class List{
     List(){
         head = NULL;
     }
+    
     void setHead(Node* head){
         this->head = head;
     }
