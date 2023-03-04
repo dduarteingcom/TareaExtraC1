@@ -1,8 +1,5 @@
 #include <iostream>
-<<<<<<< HEAD
-//aafdgdfg
-//dfasdf
-int a;
+using namespace std;
 class Node{
     public:
     
@@ -10,9 +7,9 @@ class Node{
      Node * next;
      Node(){
         data = 0;
-=======
+     }
+}
 
-using namespace std;
 
 class Collector {
     public:
@@ -35,7 +32,6 @@ class Node{
 
      Node(){  //constructor
         data = NULL;
->>>>>>> cd8b05dbff3ab91ddf755bc7cc7f759e16819598
         next = NULL;
      }
      Node (int data){ // constructor con data
