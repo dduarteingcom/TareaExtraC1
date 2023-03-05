@@ -8,8 +8,10 @@ class Node{
      Node(){
         data = 0;
      }
+     void new (int six){
+    
 }
-
+}
 
 class Collector {
     public:
