@@ -95,6 +95,7 @@ int main(){
     nuevaLista.insert(999);
     cout << nuevaLista.inicio.getData() << endl;
     cout << nuevaLista.inicio.next->getData() << endl;
+    cout << "DADUUUUUUUUUUUUU" << endl;
 
 
     return 0;
