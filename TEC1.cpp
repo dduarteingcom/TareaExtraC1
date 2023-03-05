@@ -1,4 +1,6 @@
 #include <iostream>
+#include <fstream>
+
 using namespace std;
 class Node{
     public:
@@ -13,10 +15,12 @@ class Node{
 }
 }
 
+
+
 class Collector {
     public:
     bool available;
-    Node *  list[1000];
+    //Node *  list[1000];
 
     Collector() {
         available = false;
@@ -30,54 +34,84 @@ class Collector {
 class Node{
     public:
      int data; // data del nodo
-     Node * next; // puntero al siguiente nodo
+     Node* next; // puntero al siguiente nodo
 
-     Node(){  //constructor
+     Node(){
         data = NULL;
-        next = NULL;
+        next = nullptr;
      }
-     Node (int data){ // constructor con data
-        this->data = data;
-        this->next = NULL;
+
+     Node (int x){ // constructor con data
+        data = x;
+        next = nullptr;
      }
 
      void setData(int x){ // setear data
         data = x;
      }
+
+     void setNext(Node* x){
+        next = x;
+     }
      int getData(){ // obtener data
         return data;
      }
+
 };
 
 class List{
     public:
-    Node * head; // El nodo head de la lista
-    
-    Collector reciclaje; // el collector propio de la instancia de la lista
+    Node inicio; // El nodo head de la lista
+    Node* head = &inicio; // puntero al head
+    //Collector reciclaje; // el collector propio de la instancia de la lista
     List(){ // constructor, siempre sin nodos
         head = NULL;
 
     }
-    
     void setHead(Node* head){
         this->head = head;
+
+    void setHead(int data){
+         head->setData(data);
+
     }
     int getHead(){
-        return head->data;
+        return head->getData();
     }
     void insert(int data){
-        //if 
-        Node* newNode = new Node(data);
-        if(head == NULL){
-            head = newNode;
+        Node newNode(data);
+        if (false != false){
+            "piringola";
         }
         else{
-            newNode->next = this->head;
-            this->head=newNode;
+            if(inicio.data == NULL){
+            inicio = newNode;
+            cout << "entre al inicio porque no habia nada" << endl;
+
+
+            }
+            else{
+            Node temp = inicio;
+            Node* tempPtr = &temp;
+            cout << temp.getData() << endl;
+            inicio = newNode;
+            inicio.setNext(tempPtr);
+            cout << "entre al inicio pero si habia algo" << endl;
+
+            }
         }
     }
 };
 
 int main(){
+
+    List nuevaLista;
+    nuevaLista.insert(389);
+    cout << nuevaLista.inicio.getData() << endl;
+    nuevaLista.insert(999);
+    cout << nuevaLista.inicio.getData() << endl;
+    cout << nuevaLista.inicio.next->getData() << endl;
+
+
     return 0;
 }
