@@ -5,15 +5,72 @@ using namespace std;
 
 class Collector {
     public:
+    Node* headPtr; 
+
     Collector(){
         headPtr = nullptr;
     }
+    
     void insertF(Node* x);
     Node* deleteF();
     bool available();
     void showCol();
-    Node* headPtr; 
+    void test();
+
+    friend class Node;
 };
+
+//------------------------------------------------
+
+class Node{
+    public:
+        int data; // data del nodo
+        Node* nextPtr; // puntero al siguiente nodo
+
+        Node(){ //constructor sin data
+            data = 0;
+            nextPtr = nullptr;
+        }
+        Node (int x){ // constructor con data
+            data = x;
+            nextPtr = nullptr;
+        }
+        Node (int x, Node* sig){ //constructor con data y ptr al siguiente
+            data = x;
+            nextPtr = sig;
+        }
+
+        void setData(int x);
+        void setNextPtr(Node* x);
+        int getData();
+        Node* getNextPtr();
+
+        friend class Collector;
+};
+
+//------------------------------------------------
+
+class List{
+    public:
+        Node* headPtr; // puntero al head
+        int size; // size de lista
+        Collector* reciclaje; //ptr a collector
+
+        List(){ // constructor, siempre sin nodos
+            headPtr = nullptr;
+            size = 0;
+            reciclaje = new Collector();
+        }
+
+        void setHeadData(int data);
+        int getHeadData();
+        void insertLast(int data);
+        void insertFirst(int data);
+        void deleteItem(int data);
+        void showList();
+};
+
+//------------------------------------------------
 
 void Collector::insertF(Node* x){
     if (this->headPtr = nullptr){
@@ -46,31 +103,11 @@ void Collector::showCol(){
         }
     }
 }
+void Collector::test(){
+    cout << "Hola" << endl;
+}
 
-class Node{
-    public:
-        int data; // data del nodo
-        Node* nextPtr; // puntero al siguiente nodo
-
-        Node(){ //constructor sin data
-            data = 0;
-            nextPtr = nullptr;
-        }
-        Node (int x){ // constructor con data
-            data = x;
-            nextPtr = nullptr;
-        }
-        Node (int x, Node* sig){ //constructor con data y ptr al siguiente
-            data = x;
-            nextPtr = sig;
-        }
-
-        void setData(int x);
-        void setNextPtr(Node* x);
-        int getData();
-        Node* getNextPtr();
-
-};
+//------------------------------------------------
 
 void Node::setData(int x){
     data = x;
@@ -85,26 +122,7 @@ Node* Node::getNextPtr(){
     return nextPtr;
 }
 
-
-class List{
-    public:
-        Node* headPtr; // puntero al head
-        int size;
-        Collector* reciclaje;
-
-        List(){ // constructor, siempre sin nodos
-            headPtr = nullptr;
-            size = 0;
-            reciclaje = new Collector();
-        }
-
-        void setHeadData(int data);
-        int getHeadData();
-        void insertLast(int data);
-        void insertFirst(int data);
-        void deleteItem(int data);
-        void showList();
-};
+//------------------------------------------------
 
 void List::setHeadData(int data){
     if (size != 0){
@@ -179,6 +197,7 @@ void List::deleteItem(int data){
     if (data == headPtr->data){
         cout << "mem: " << headPtr << endl;
         headPtr = headPtr->nextPtr;
+        //reciclaje->test();
     }
     else{
         Node* buscador = headPtr;
@@ -208,6 +227,8 @@ void List::showList(){
         cout << endl;
     }
 }
+
+//------------------------------------------------
 
 int main(){
 
