@@ -5,20 +5,22 @@ using namespace std;
 
 class Collector {
     public:
-    bool status;
-    Node* useMePtr;
-
-    Collector() {
-        status = false;
-        useMePtr = nullptr;
+    Collector(){
+        headPtr = nullptr;
     }
-
-    void updateStatus();
+    void insertF(Node* x);
+    Node* deleteF();
+    bool available();
+    void showCol();
+    Node* headPtr; 
 };
 
-void Collector::updateStatus(){
-    
-}
+
+class Node{
+public:
+    int data; // data del nodo
+    Node* nextPtr; // puntero al siguiente nodo
+};
 
     class Node{
     public:
@@ -44,7 +46,37 @@ void Collector::updateStatus(){
      Node* getNextPtr();
 
 };
-
+void Collector::insertF(Node* x){
+    if (this->headPtr = nullptr){
+        this->headPtr = x;
+        this->headPtr->setData(NULL);
+    }
+    else{
+        x->setNextPtr(this->headPtr);
+        this->headPtr= x;
+        this->headPtr->setData(NULL);
+    }
+}
+Node* Collector::deleteF(){
+    Node* tmp = this->headPtr;
+    this->headPtr=this->headPtr->nextPtr;
+    return tmp;
+}
+bool Collector::available(){
+    if (this->headPtr == nullptr){
+        return false;
+    }
+    else{
+        return true;
+    }
+}
+void Collector::showCol(){
+    if(this->headPtr != nullptr){
+        for(Node* temp = this->headPtr; temp != nullptr; temp=temp->nextPtr){
+            cout << temp;
+        }
+    }
+}
 void Node::setData(int x){
     data = x;
 }
