@@ -2,65 +2,58 @@
 #include <fstream>
 
 using namespace std;
-class Node{
-    public:
-    
-     int data;
-     Node * next;
-     Node(){
-        data = 0;
-     }
-     void new (int six){
-    
-}
-}
-
 
 
 class Collector {
     public:
-    bool available;
-    //Node *  list[1000];
+    Collector(){
+        headPtr = nullptr;
+    }
+    void insertF(Node* x);
+    void deleteF();
+    Node* headPtr; 
+};
 
-    Collector() {
-        available = false;
 
+class Node{
+public:
+    int data; // data del nodo
+    Node* nextPtr; // puntero al siguiente nodo
+
+    Node(){
+    data = 0;
+    nextPtr = nullptr;
     }
 
+    Node (int x){ // constructor con data
+    data = x;
+    nextPtr = nullptr;
+    }
+    void setData(int x){ // setear data
+    data = x;
+    }
 
-    
-};
-
-    class Node{
-    public:
-     int data; // data del nodo
-     Node* nextPtr; // puntero al siguiente nodo
-
-     Node(){
-        data = 0;
-        nextPtr = nullptr;
-     }
-
-     Node (int x){ // constructor con data
-        data = x;
-        nextPtr = nullptr;
-     }
-
-     void setData(int x){ // setear data
-        data = x;
-     }
-
-     void setNext(Node* x){
-        nextPtr = x;
-     }
-     int getData(){ // obtener data
-        return data;
-     }
-     Node* getNexPtrt() {
-        return nextPtr;
-     }
+    void setNext(Node* x){
+    nextPtr = x;
+    }
+    int getData(){ // obtener data
+    return data;
+    }
+    Node* getNexPtrt() {
+    return nextPtr;
+    }
 
 };
+void Collector::insertF(Node* x){
+    if (this->headPtr = nullptr){
+        this->headPtr = x;
+    }
+    else{
+        x->setNext(this->headPtr);
+        this->headPtr= x;
+
+    }
+}
 
 class List{
     public:
@@ -123,7 +116,7 @@ int main(){
    cout << nuevaLista.headPtr->getData() << endl;
    cout << nuevaLista.headPtr->nextPtr->getData() << endl;
    cout << nuevaLista.headPtr->nextPtr->nextPtr->getData() << endl;
-
-
     return 0;
+
 }
+
