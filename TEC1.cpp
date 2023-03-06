@@ -15,37 +15,6 @@ class Collector {
     Node* headPtr; 
 };
 
-
-class Node{
-public:
-    int data; // data del nodo
-    Node* nextPtr; // puntero al siguiente nodo
-};
-
-    class Node{
-    public:
-     int data; // data del nodo
-     Node* nextPtr; // puntero al siguiente nodo
-
-     Node(){ //constructor sin data
-        data = 0;
-        nextPtr = nullptr;
-     }
-     Node (int x){ // constructor con data
-        data = x;
-        nextPtr = nullptr;
-     }
-     Node (int x, Node* sig){ //constructor con data y ptr al siguiente
-        data = x;
-        nextPtr = sig;
-     }
-
-     void setData(int x);
-     void setNextPtr(Node* x);
-     int getData();
-     Node* getNextPtr();
-
-};
 void Collector::insertF(Node* x){
     if (this->headPtr = nullptr){
         this->headPtr = x;
@@ -78,29 +47,28 @@ void Collector::showCol(){
     }
 }
 
-
 class Node{
     public:
-     int data; // data del nodo
-     Node* nextPtr; // puntero al siguiente nodo
+        int data; // data del nodo
+        Node* nextPtr; // puntero al siguiente nodo
 
-     Node(){ //constructor sin data
-        data = 0;
-        nextPtr = nullptr;
-     }
-     Node (int x){ // constructor con data
-        data = x;
-        nextPtr = nullptr;
-     }
-     Node (int x, Node* sig){ //constructor con data y ptr al siguiente
-        data = x;
-        nextPtr = sig;
-     }
+        Node(){ //constructor sin data
+            data = 0;
+            nextPtr = nullptr;
+        }
+        Node (int x){ // constructor con data
+            data = x;
+            nextPtr = nullptr;
+        }
+        Node (int x, Node* sig){ //constructor con data y ptr al siguiente
+            data = x;
+            nextPtr = sig;
+        }
 
-     void setData(int x);
-     void setNextPtr(Node* x);
-     int getData();
-     Node* getNextPtr();
+        void setData(int x);
+        void setNextPtr(Node* x);
+        int getData();
+        Node* getNextPtr();
 
 };
 
