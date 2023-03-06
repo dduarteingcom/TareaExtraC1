@@ -8,7 +8,9 @@ class Collector {
         headPtr = nullptr;
     }
     void insertF(Node* x);
-    void deleteF();
+    Node* deleteF();
+    bool available();
+    void showCol();
     Node* headPtr; 
 };
 
@@ -45,16 +47,34 @@ public:
 void Collector::insertF(Node* x){
     if (this->headPtr = nullptr){
         this->headPtr = x;
+        this->headPtr->setData(NULL);
     }
     else{
         x->setNextPtr(this->headPtr);
         this->headPtr= x;
+        this->headPtr->setData(NULL);
     }
 }
-void Collector::deleteF(){
-    
+Node* Collector::deleteF(){
+    Node* tmp = this->headPtr;
+    this->headPtr=this->headPtr->nextPtr;
+    return tmp;
 }
-
+bool Collector::available(){
+    if (this->headPtr == nullptr){
+        return false;
+    }
+    else{
+        return true;
+    }
+}
+void Collector::showCol(){
+    if(this->headPtr != nullptr){
+        for(Node* temp = this->headPtr; temp != nullptr; temp=temp->nextPtr){
+            cout << temp;
+        }
+    }
+}
 void Node::setData(int x){
     data = x;
 }
