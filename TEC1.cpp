@@ -3,8 +3,6 @@
 
 using namespace std;
 
-
-
 class Collector {
     public:
     bool available;
@@ -15,8 +13,6 @@ class Collector {
 
     }
 
-
-    
 };
 
     class Node{
@@ -55,13 +51,13 @@ class List{
         Node* headPtr; // puntero al head
         Node* tailPtr;
         int size;
-        //Collector* reciclaje; // el collector propio de la instancia de la lista
+
         List(){ // constructor, siempre sin nodos
             headPtr = nullptr;
             tailPtr = nullptr;
             size = 0;
-
         }
+
         void setHead(int data){
             if (size != 0){
                  headPtr->setData(data);
@@ -69,8 +65,8 @@ class List{
             else{
                 cout << "Lista no posee elementos" << endl;
             }
-           
         }
+
         int getHead(){
             if (size != 0){
                  return headPtr->getData();
@@ -78,8 +74,8 @@ class List{
             else{
                 cout << "Lista no posee elementos" << endl;
             }
-            
         }
+
         void insertLast(int data){
             Node* newPtr = new Node(data);
             if (false != false){
@@ -100,14 +96,53 @@ class List{
                 }
             }
         }
+
+        void insertFirst(int data){
+            if (false != false) {
+                "piringola";
+                /*
+                newPtr = newcollector.retrievePtr() / *pepe;
+                *newPtr = new Node (69);
+                if (headPtr == nullptr){
+                    headPtr = newPtr;
+                    tailPtr = newPtr;
+                    size++;
+                }
+                else {
+                    newPtr->setNext(headPtr);
+                    headPtr = newPtr;
+                    size++;
+                }
+                */ 
+            }
+            else {
+                Node* newPtr = new Node(data);
+                if (headPtr == nullptr){
+                    headPtr = newPtr;
+                    tailPtr = newPtr;
+                    size++;
+                }
+                else {
+                    newPtr->setNext(headPtr);
+                    headPtr = newPtr;
+                    size++;
+                }
+            }
+        }
+
+        void deleteItem(int data) {
+
+        }
+
+
     };
 
 int main(){
 
     List nuevaLista;
-   nuevaLista.insertLast(99);
-   nuevaLista.insertLast(100);
-   nuevaLista.insertLast(101);
+   nuevaLista.insertFirst(99);
+   nuevaLista.insertFirst(100);
+   nuevaLista.insertFirst(101);
    cout << nuevaLista.headPtr->getData() << endl;
    cout << nuevaLista.headPtr->nextPtr->getData() << endl;
    cout << nuevaLista.headPtr->nextPtr->nextPtr->getData() << endl;
