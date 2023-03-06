@@ -19,19 +19,19 @@ class Collector {
     
 };
 
-class Node{
+    class Node{
     public:
      int data; // data del nodo
-     Node* next; // puntero al siguiente nodo
+     Node* nextPtr; // puntero al siguiente nodo
 
      Node(){
-        data = NULL;
-        next = nullptr;
+        data = 0;
+        nextPtr = nullptr;
      }
 
      Node (int x){ // constructor con data
         data = x;
-        next = nullptr;
+        nextPtr = nullptr;
      }
 
      void setData(int x){ // setear data
@@ -39,63 +39,78 @@ class Node{
      }
 
      void setNext(Node* x){
-        next = x;
+        nextPtr = x;
      }
      int getData(){ // obtener data
         return data;
+     }
+     Node* getNexPtrt() {
+        return nextPtr;
      }
 
 };
 
 class List{
     public:
-    Node inicio; // El nodo head de la lista
-    Node* head = &inicio; // puntero al head
-    //Collector reciclaje; // el collector propio de la instancia de la lista
-    List(){ // constructor, siempre sin nodos
-        head = NULL;
+        Node* headPtr; // puntero al head
+        Node* tailPtr;
+        int size;
+        //Collector* reciclaje; // el collector propio de la instancia de la lista
+        List(){ // constructor, siempre sin nodos
+            headPtr = nullptr;
+            tailPtr = nullptr;
+            size = 0;
 
-    }
-    void setHead(int data){
-         head->setData(data);
-    }
-    int getHead(){
-        return head->getData();
-    }
-    void insert(int data){
-        Node newNode(data);
-        if (false != false){
-            "piringola";
         }
-        else{
-            if(inicio.data == NULL){
-            inicio = newNode;
-            cout << "entre al inicio porque no habia nada" << endl;
-
-
+        void setHead(int data){
+            if (size != 0){
+                 headPtr->setData(data);
             }
             else{
-            Node temp = inicio;
-            Node* tempPtr = &temp;
-            cout << temp.getData() << endl;
-            inicio = newNode;
-            inicio.setNext(tempPtr);
-            cout << "entre al inicio pero si habia algo" << endl;
+                cout << "Lista no posee elementos" << endl;
+            }
+           
+        }
+        int getHead(){
+            if (size != 0){
+                 return headPtr->getData();
+            }
+            else{
+                cout << "Lista no posee elementos" << endl;
+            }
+            
+        }
+        void insertLast(int data){
+            Node* newPtr = new Node(data);
+            if (false != false){
+                "piringola";
+            }
+            else{
+                if(headPtr == nullptr){
+                    headPtr = newPtr;
+                    tailPtr = newPtr;
+                    size++;
 
+                }
+                else{
+                     tailPtr->setNext(newPtr);
+                     tailPtr = tailPtr->getNexPtrt();
+                     size++;
+
+                }
             }
         }
-    }
-};
+    };
 
 int main(){
 
     List nuevaLista;
-    nuevaLista.insert(389);
-    cout << nuevaLista.inicio.getData() << endl;
-    nuevaLista.insert(999);
-    cout << nuevaLista.inicio.getData() << endl;
-    cout << nuevaLista.inicio.next->getData() << endl;
-    cout << "DADUUUUUUUUUUUUU" << endl;
+   nuevaLista.insertLast(99);
+   nuevaLista.insertLast(100);
+   nuevaLista.insertLast(101);
+   cout << nuevaLista.headPtr->getData() << endl;
+   cout << nuevaLista.headPtr->nextPtr->getData() << endl;
+   cout << nuevaLista.headPtr->nextPtr->nextPtr->getData() << endl;
 
 
     return 0;
