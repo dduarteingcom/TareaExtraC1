@@ -291,14 +291,18 @@ int main(){
     nuevaLista.showList();
 
     nuevaLista.deleteItem(101);
+    nuevaLista.deleteItem(102);
+
 
     nuevaLista.showList();
 
-    nuevaLista.insertFirst(25);
     nuevaLista.reciclaje->showCol();
-    nuevaLista.insertLast(9);
 
-    nuevaLista.showList();
+    //nuevaLista.insertFirst(25);
+    //nuevaLista.reciclaje->showCol();
+    //nuevaLista.insertLast(9);
+
+    //nuevaLista.showList();
     
     
 
