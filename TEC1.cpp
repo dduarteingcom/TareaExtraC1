@@ -86,9 +86,12 @@ void Collector::insertF(Node* x){
     }
 }
 Node* Collector::deleteF(){
+    cout << "Soy pendejo"<< endl;
     if ( cHeadPtr->nextPtr == nullptr){
         Node* tmp = cHeadPtr;
+        cout << tmp->getNextPtr()<<"TOdos somos agripinos";
         cHeadPtr = nullptr;
+
         return tmp;
     }
     else{
@@ -193,8 +196,10 @@ void List::insertLast(int data){
     }
 }
 void List::insertFirst(int data){
+    
     if (reciclaje->available() != false){
         Node* newPtr = reciclaje->deleteF();
+        
         if (headPtr == nullptr){
             headPtr = newPtr;
             headPtr->setData(data);
@@ -204,7 +209,6 @@ void List::insertFirst(int data){
 
         }
         else{
-            Node* newPtr = reciclaje->deleteF();
             newPtr->setNextPtr(headPtr);
             headPtr = newPtr;
             headPtr->setData(data);
@@ -284,26 +288,25 @@ int main(){
     nuevaLista.insertLast(102);
     nuevaLista.insertLast(103);
 
-    nuevaLista.showList();
+    //nuevaLista.showList();
 
     nuevaLista.deleteItem(99);
 
-    nuevaLista.showList();
+    //nuevaLista.showList();
 
     nuevaLista.deleteItem(101);
     nuevaLista.deleteItem(102);
 
+    cout << "AAAAAAAAAAAAAAAAAAAAAA";
+    nuevaLista.showList();
+    cout << "AAAAAAAAAAAAAAAAAAAAAA";
+    nuevaLista.insertFirst(25);
+    
+    nuevaLista.insertLast(9);
 
     nuevaLista.showList();
-
     nuevaLista.reciclaje->showCol();
-
-    //nuevaLista.insertFirst(25);
-    //nuevaLista.reciclaje->showCol();
-    //nuevaLista.insertLast(9);
-
-    //nuevaLista.showList();
-    
+    nuevaLista.insertLast(17);
     
 
     //FILO
