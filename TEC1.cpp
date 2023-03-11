@@ -9,8 +9,9 @@ class Node{
     public:
         int data; // data del nodo
         Node* nextPtr; // puntero al siguiente nodo
+        Collector* ptrReciclaje; // Ptr al reciclaje que todos los nodos comparten
 
-        Node(){ //constructor sin data
+        Node(){ // constructor sin data
             data = 0;
             nextPtr = nullptr;
         }
@@ -18,9 +19,19 @@ class Node{
             data = x;
             nextPtr = nullptr;
         }
-        Node (int x, Node* sig){ //constructor con data y ptr al siguiente
+        Node (int x, Node* sig){ // constructor con data y ptr al siguiente
             data = x;
             nextPtr = sig;
+        }
+        Node(int x, Collector* y){
+            data = x;
+            nextPtr = nullptr;
+            ptrReciclaje = y;
+        }
+        Node (int x, Node* sig, Collector* y){ // constructor con data y ptr al siguiente
+            data = x;
+            nextPtr = sig;
+            ptrReciclaje = y;
         }
 
         void setData(int x);
@@ -28,7 +39,7 @@ class Node{
         int getData();
         Node* getNextPtr();
         void * operator new(size_t size);
-        void operator delete(void * p);    
+        //void operator delete(void * p);    
 };
 
 //-------------------------------------------------
@@ -137,14 +148,15 @@ Node* Node::getNextPtr(){
     return nextPtr;
 }
 void* Node::operator new (size_t size){
-    cout << "rellenar" << endl;
+    cout << "entre al overload del new" << endl;
     void * p = ::operator new(size);
     cout << "heapMan" << endl;
+    return p;
 }
-void Node::operator delete(void * p) {
-    cout<< "Overloading delete operator " << endl;
-    free(p);
-}
+//void Node::operator delete(void * p) {
+  //  cout<< "Overloading delete operator " << endl;
+   // free(p);
+//}
 
 //------------------------------------------------
 
@@ -166,6 +178,9 @@ int List::getHeadData(){
     }
 }
 void List::insertLast(int data){
+
+    //Node* newPtr = new Node(data);
+
     if (reciclaje->available() != false){
         Node* newPtr = reciclaje->deleteF();
         if (headPtr == nullptr){
@@ -290,7 +305,9 @@ void List::showList(){
 
 int main(){
 
-    /*
+    List nuevaLista;
+
+    nuevaLista.insertFirst(99);
     nuevaLista.insertLast(100);
     nuevaLista.insertLast(101);
     nuevaLista.insertLast(102);
@@ -314,11 +331,8 @@ int main(){
 
     nuevaLista.showList();
     nuevaLista.reciclaje->showCol();
-    */
-
-    List nuevaLista;
-
-    nuevaLista.insertFirst(99);
+    
+    
     
 
     
