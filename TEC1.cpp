@@ -51,23 +51,6 @@ class Collector {
 
 //-------------------------------------------------
 
-class Collector {
-    public:
-    Node* cHeadPtr; 
-
-    Collector(){
-        cHeadPtr = nullptr;
-    }
-    
-    void insertF(Node* x);
-    Node* deleteF();
-    bool available();
-    void showCol();
-
-    friend class Node;
-};
-
-//------------------------------------------------
 
 class List{
     public:
@@ -158,6 +141,7 @@ void* Node::operator new (size_t size){
     cout << "rellenar" << endl;
     void * p = ::operator new(size);
     cout << "heapMan" << endl;
+    return p;
 }
 void Node::operator delete(void * p) {
     cout<< "Overloading delete operator " << endl;
@@ -248,7 +232,8 @@ void List::insertFirst(int data){
     }
     else{
         if (headPtr == nullptr){
-            Node* newPtr = new Node(data);
+            Node* newPtr = new Node(sizeof(Node));
+            cout<< "Llegué";
             headPtr = newPtr;
             size++;
         }
