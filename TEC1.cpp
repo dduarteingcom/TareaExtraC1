@@ -27,13 +27,8 @@ class Node{
         void setNextPtr(Node* x);
         int getData();
         Node* getNextPtr();
-        void * operator new(size_t sizeOfInt){ 
-            cout << "rellenar" << endl;
-            void * p = ::operator new(sizeOfInt);
-
-}
-
-
+        void * operator new(size_t size);
+        void operator delete(void * p);    
 };
 
 //-------------------------------------------------
@@ -141,6 +136,15 @@ int Node::getData(){
 Node* Node::getNextPtr(){
     return nextPtr;
 }
+void* Node::operator new (size_t size){
+    cout << "rellenar" << endl;
+    void * p = ::operator new(size);
+    cout << "heapMan" << endl;
+}
+void Node::operator delete(void * p) {
+    cout<< "Overloading delete operator " << endl;
+    free(p);
+}
 
 //------------------------------------------------
 
@@ -226,7 +230,7 @@ void List::insertFirst(int data){
     }
     else{
         if (headPtr == nullptr){
-            Node* newPtr = new Node(data); // por aca usar el @ y editar el cosntructor
+            Node* newPtr = new Node(data);
             headPtr = newPtr;
             size++;
         }
@@ -243,6 +247,7 @@ void List::deleteItem(int data){
         Node* temp = headPtr;
         cout << "mem: " << headPtr << endl;
         headPtr = headPtr->nextPtr;
+        //delete(temp);
         reciclaje->insertF(temp);
         reciclaje->showCol();
         size--;
@@ -281,15 +286,11 @@ void List::showList(){
     }
 }
 
-
-
 //------------------------------------------------
 
 int main(){
 
-    List nuevaLista;
-
-    nuevaLista.insertFirst(99);
+    /*
     nuevaLista.insertLast(100);
     nuevaLista.insertLast(101);
     nuevaLista.insertLast(102);
@@ -313,7 +314,14 @@ int main(){
 
     nuevaLista.showList();
     nuevaLista.reciclaje->showCol();
-    nuevaLista.insertLast(17);
+    */
+
+    List nuevaLista;
+
+    nuevaLista.insertFirst(99);
+    
+
+    
     
 
     //FILO
