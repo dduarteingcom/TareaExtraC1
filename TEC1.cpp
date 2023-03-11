@@ -139,6 +139,12 @@ Node* Node::getNextPtr(){
 
 //------------------------------------------------
 
+void * operator new(size_t sizeOfInt){ 
+    cout << "rellenar" << endl;
+}
+
+//------------------------------------------------
+
 void List::setHeadData(int data){
     if (size != 0){
         headPtr->setData(data);
@@ -221,7 +227,7 @@ void List::insertFirst(int data){
     }
     else{
         if (headPtr == nullptr){
-            Node* newPtr = new Node(data);
+            Node* newPtr = new Node(data); // por aca usar el @ y editar el cosntructor
             headPtr = newPtr;
             size++;
         }
@@ -275,6 +281,8 @@ void List::showList(){
         cout << endl;
     }
 }
+
+
 
 //------------------------------------------------
 
