@@ -27,8 +27,13 @@ class Node{
         void setNextPtr(Node* x);
         int getData();
         Node* getNextPtr();
+        void * operator new(size_t sizeOfInt){ 
+            cout << "rellenar" << endl;
+            void * p = ::operator new(sizeOfInt);
 
-        friend class Collector;
+}
+
+
 };
 
 //-------------------------------------------------
@@ -135,12 +140,6 @@ int Node::getData(){
 }
 Node* Node::getNextPtr(){
     return nextPtr;
-}
-
-//------------------------------------------------
-
-void * operator new(size_t sizeOfInt){ 
-    cout << "rellenar" << endl;
 }
 
 //------------------------------------------------
