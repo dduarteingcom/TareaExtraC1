@@ -3,24 +3,7 @@
 
 using namespace std;
 
-class Collector {
-    public:
-    Node* headPtr; 
 
-    Collector(){
-        headPtr = nullptr;
-    }
-    
-    void insertF(Node* x);
-    Node* deleteF();
-    bool available();
-    void showCol();
-    void test();
-
-    friend class Node;
-};
-
-//------------------------------------------------
 
 class Node{
     public:
@@ -48,6 +31,24 @@ class Node{
         friend class Collector;
 };
 
+//-------------------------------------------------
+
+class Collector {
+    public:
+    Node* cHeadPtr; 
+
+    Collector(){
+        cHeadPtr = nullptr;
+    }
+    
+    void insertF(Node* x);
+    Node* deleteF();
+    bool available();
+    void showCol();
+
+    friend class Node;
+};
+
 //------------------------------------------------
 
 class List{
@@ -73,38 +74,52 @@ class List{
 //------------------------------------------------
 
 void Collector::insertF(Node* x){
-    if (this->headPtr = nullptr){
-        this->headPtr = x;
-        this->headPtr->setData(NULL);
+    if (cHeadPtr == nullptr){
+        cHeadPtr = x;
+        cHeadPtr->setData(0); //se va a usar 0 en vez de null
+        cHeadPtr->setNextPtr(nullptr);
     }
     else{
-        x->setNextPtr(this->headPtr);
-        this->headPtr= x;
-        this->headPtr->setData(NULL);
+        x->setNextPtr(cHeadPtr); //aca
+        cHeadPtr= x;
+        cHeadPtr->setData(0);
     }
 }
 Node* Collector::deleteF(){
-    Node* tmp = this->headPtr;
-    this->headPtr=this->headPtr->nextPtr;
-    return tmp;
+    cout << "Soy pendejo"<< endl;
+    if ( cHeadPtr->nextPtr == nullptr){
+        Node* tmp = cHeadPtr;
+        cout << tmp->getNextPtr()<<"TOdos somos agripinos";
+        cHeadPtr = nullptr;
+
+        return tmp;
+    }
+    else{
+        Node* tmp = cHeadPtr;
+        cHeadPtr = cHeadPtr->nextPtr;
+        return tmp;
+    }
+    
 }
 bool Collector::available(){
-    if (this->headPtr == nullptr){
+    if (cHeadPtr == nullptr){
+        cout << "opa" << endl;
         return false;
     }
     else{
+        cout << "estoy en true" << endl;
         return true;
     }
 }
 void Collector::showCol(){
-    if(this->headPtr != nullptr){
-        for(Node* temp = this->headPtr; temp != nullptr; temp=temp->nextPtr){
-            cout << temp;
+    if(cHeadPtr != nullptr){
+        for(Node* temp = cHeadPtr; temp != nullptr; temp=temp->nextPtr){
+            cout << temp << endl;
         }
     }
-}
-void Collector::test(){
-    cout << "Hola" << endl;
+    else{
+        cout << "estoy empty :(" << endl;
+    }
 }
 
 //------------------------------------------------
@@ -142,8 +157,27 @@ int List::getHeadData(){
     }
 }
 void List::insertLast(int data){
-    if (false != false){
-        "piringola";
+    if (reciclaje->available() != false){
+        Node* newPtr = reciclaje->deleteF();
+        if (headPtr == nullptr){
+            headPtr = newPtr;
+            headPtr->setData(data);
+            headPtr->setNextPtr(nullptr);
+            size++;
+            cout << newPtr << endl;
+            reciclaje->showCol();
+        }
+        else{
+            Node* temp = headPtr;
+            while (temp->nextPtr != nullptr){
+                temp = temp->nextPtr;
+            }
+            temp->setNextPtr(newPtr);
+            newPtr->setNextPtr(nullptr);
+            newPtr->setData(data);
+            size++;
+            cout << newPtr << " - " << newPtr->data << endl;
+        }
     }
     else{
         Node* newPtr = new Node(data);
@@ -162,22 +196,28 @@ void List::insertLast(int data){
     }
 }
 void List::insertFirst(int data){
-    if (false != false){
-        "piringola";
-        /*
-        newPtr = newcollector.retrievePtr() // *pepe;
-        *newPtr = new Node (data);
+    
+    if (reciclaje->available() != false){
+        Node* newPtr = reciclaje->deleteF();
+        
         if (headPtr == nullptr){
             headPtr = newPtr;
-            tailPtr = newPtr;
+            headPtr->setData(data);
+            headPtr->setNextPtr(nullptr);
             size++;
+            reciclaje->showCol();
+
         }
-        else {
+        else{
             newPtr->setNextPtr(headPtr);
             headPtr = newPtr;
+            headPtr->setData(data);
             size++;
+            reciclaje->showCol();
+            cout << "estoy aqui" << endl;
+            cout << newPtr << " - " << newPtr->data << endl;
+
         }
-        */
     }
     else{
         if (headPtr == nullptr){
@@ -186,7 +226,7 @@ void List::insertFirst(int data){
             size++;
         }
         else{
-            Node* newPtr = new Node(data, headPtr);bool
+            Node* newPtr = new Node(data, headPtr);
             headPtr = newPtr;
             size++;
         }
@@ -195,9 +235,14 @@ void List::insertFirst(int data){
 }
 void List::deleteItem(int data){
     if (data == headPtr->data){
+        Node* temp = headPtr;
         cout << "mem: " << headPtr << endl;
         headPtr = headPtr->nextPtr;
-        //reciclaje->test();
+        reciclaje->insertF(temp);
+        reciclaje->showCol();
+        size--;
+        
+        
     }
     else{
         Node* buscador = headPtr;
@@ -206,10 +251,13 @@ void List::deleteItem(int data){
             prev = buscador;
             buscador = buscador->nextPtr;
         }
-        cout << prev->data << endl;
-        cout << buscador->data << endl;
-        prev->nextPtr = prev->nextPtr->nextPtr;
+        //cout << prev->data << endl;
+        //cout << buscador->data << endl;
+        prev->nextPtr = buscador->nextPtr; // prev->nextPtr = prev->nextPtr->nextPtr;
         cout << "mem: " << buscador << endl;
+        reciclaje->insertF(buscador);
+        reciclaje->showCol();
+        size--;
     }
     
 }
@@ -240,11 +288,27 @@ int main(){
     nuevaLista.insertLast(102);
     nuevaLista.insertLast(103);
 
-    nuevaLista.showList();
+    //nuevaLista.showList();
 
     nuevaLista.deleteItem(99);
 
+    //nuevaLista.showList();
+
+    nuevaLista.deleteItem(101);
+    nuevaLista.deleteItem(102);
+
+    cout << "AAAAAAAAAAAAAAAAAAAAAA";
     nuevaLista.showList();
+    cout << "AAAAAAAAAAAAAAAAAAAAAA";
+    nuevaLista.insertFirst(25);
+    
+    nuevaLista.insertLast(9);
+
+    nuevaLista.showList();
+    nuevaLista.reciclaje->showCol();
+    
+
+    //FILO
 
     return 0;
 }
