@@ -27,8 +27,26 @@ class Node{
         void setNextPtr(Node* x);
         int getData();
         Node* getNextPtr();
+        void * operator new(size_t size);
+        void operator delete(void * p);    
+};
 
-        friend class Collector;
+//-------------------------------------------------
+
+class Collector {
+    public:
+    Node* cHeadPtr; 
+
+    Collector(){
+        cHeadPtr = nullptr;
+    }
+    
+    void insertF(Node* x);
+    Node* deleteF();
+    bool available();
+    void showCol();
+
+    friend class Node;
 };
 
 //-------------------------------------------------
@@ -136,6 +154,15 @@ int Node::getData(){
 Node* Node::getNextPtr(){
     return nextPtr;
 }
+void* Node::operator new (size_t size){
+    cout << "rellenar" << endl;
+    void * p = ::operator new(size);
+    cout << "heapMan" << endl;
+}
+void Node::operator delete(void * p) {
+    cout<< "Overloading delete operator " << endl;
+    free(p);
+}
 
 //------------------------------------------------
 
@@ -238,6 +265,8 @@ void List::deleteItem(int data){
         Node* temp = headPtr;
         cout << "mem: " << headPtr << endl;
         headPtr = headPtr->nextPtr;
+        //delete(temp);
+
         reciclaje->insertF(temp);
         reciclaje->showCol();
         size--;
@@ -280,9 +309,7 @@ void List::showList(){
 
 int main(){
 
-    List nuevaLista;
-
-    nuevaLista.insertFirst(99);
+    /*
     nuevaLista.insertLast(100);
     nuevaLista.insertLast(101);
     nuevaLista.insertLast(102);
@@ -306,6 +333,14 @@ int main(){
 
     nuevaLista.showList();
     nuevaLista.reciclaje->showCol();
+
+    */
+
+    List nuevaLista;
+
+    nuevaLista.insertFirst(99);
+    
+    
     
 
     //FILO
