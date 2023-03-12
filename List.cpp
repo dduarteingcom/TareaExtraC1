@@ -52,7 +52,7 @@ void List::insertLast(int data){
         }
     }
     */
-   Node* newPtr = new Node(data);
+   Node* newPtr = new Node(data, reciclaje);
     if (headPtr == nullptr){
         headPtr = newPtr;
         size++;
@@ -146,4 +146,7 @@ void List::showList(){
         }
         cout << endl;
     }
+}
+void List::donda(){
+    cout << "kanye" << endl;
 }

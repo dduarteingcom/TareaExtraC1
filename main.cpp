@@ -6,8 +6,12 @@
 
 using namespace std;
 
-int main(){
 
+
+int main(){
+    cout<< "hola" << endl;
+
+    /*
     List nuevaLista;
 
     nuevaLista.insertFirst(99);
@@ -33,15 +37,20 @@ int main(){
     nuevaLista.insertLast(9);
 
     nuevaLista.showList();
-    nuevaLista.reciclaje->showCol();
-    
-    
-    
-
-    
+    nuevaLista.reciclaje->showCol();*/
+    cout<< "hola1" << endl;
+    List nuevaLista;
+    nuevaLista.donda();
     
 
-    //FILO
+    /*
+    List nuevaLista;
+    
+    nuevaLista.insertFirst(99);
+
+    cout<< "hola2" << endl;
+    */
 
     return 0;
 }
+

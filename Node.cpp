@@ -1,8 +1,7 @@
+#include "Node.h"
 #include "Collector.h"
 using namespace std;
 
-
-Collector* pepe = new Collector();
 
 void Node::setData(int x){
     data = x;
@@ -19,8 +18,8 @@ Node* Node::getNextPtr(){
 void* Node::operator new (size_t size){
     
     
-    if (pepe->available() != false){
-        Node* newPtr = pepe->deleteF();
+    if (ptrReciclaje->available() != false){
+        Node* newPtr = ptrReciclaje->deleteF();
         return newPtr;
     
     }
