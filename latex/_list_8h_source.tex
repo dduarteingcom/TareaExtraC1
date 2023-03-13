@@ -1,47 +1,41 @@
 \hypertarget{_list_8h_source}{}\doxysection{List.\+h}
-
+\mbox{\hyperlink{_list_8h}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00001\ \textcolor{comment}{//}}
 \DoxyCodeLine{00002\ \textcolor{comment}{//\ Created\ by\ esteban\ on\ 3/12/23.}}
 \DoxyCodeLine{00003\ \textcolor{comment}{//}}
-\DoxyCodeLine{00004\ }
-\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#ifndef\ TAREAEXTRACLASE1DATOS2\_LIST\_H}}
-\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#define\ TAREAEXTRACLASE1DATOS2\_LIST\_H}}
-\DoxyCodeLine{00007\ }
-\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_node_8h}{Node.h}}"{}}}
-\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_collector_8h}{Collector.h}}"{}}}
-\DoxyCodeLine{00010\ }
-\DoxyCodeLine{00011\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_node}{Node}};}
-\DoxyCodeLine{00012\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_collector}{Collector}};}
-\DoxyCodeLine{00013\ }
-\DoxyCodeLine{00014\ }
-\DoxyCodeLine{00015\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_list}{List}}\ \{}
-\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keyword}{friend}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_node}{Node}};}
-\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keyword}{friend}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_collector}{Collector}};}
-\DoxyCodeLine{00018\ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00019\ \ \ \ \ \mbox{\hyperlink{class_node}{Node}}*\ headPtr;\ \textcolor{comment}{//\ puntero\ al\ head}}
-\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordtype}{int}\ size;\ \textcolor{comment}{//\ size\ de\ lista}}
-\DoxyCodeLine{00021\ \ \ \ \ \textcolor{comment}{//Collector*\ reciclaje;\ //ptr\ a\ collector}}
+\DoxyCodeLine{00009\ \textcolor{comment}{}\textcolor{preprocessor}{\#ifndef\ TAREAEXTRACLASE1DATOS2\_LIST\_H}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#define\ TAREAEXTRACLASE1DATOS2\_LIST\_H}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_node_8h}{Node.h}}"{}}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_collector_8h}{Collector.h}}"{}}}
+\DoxyCodeLine{00017\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_node}{Node}};}
+\DoxyCodeLine{00021\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_collector}{Collector}};}
 \DoxyCodeLine{00022\ }
-\DoxyCodeLine{00023\ \ \ \ \ \mbox{\hyperlink{class_list}{List}}()\{\ \textcolor{comment}{//\ constructor,\ siempre\ sin\ nodos}}
-\DoxyCodeLine{00024\ }
-\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ size\ =\ 0;}
-\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \textcolor{comment}{//reciclaje\ =\ new\ Collector();}}
-\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ headPtr\ =\ \textcolor{keyword}{nullptr};}
-\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ std::cout<<\textcolor{stringliteral}{"{}HE"{}};}
-\DoxyCodeLine{00029\ \ \ \ \ \}}
-\DoxyCodeLine{00030\ }
-\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordtype}{void}\ setHeadData(\textcolor{keywordtype}{int}\ data);}
-\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{int}\ getHeadData();}
-\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{void}\ insertLast(\textcolor{keywordtype}{int}\ data);}
-\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordtype}{void}\ insertFirst(\textcolor{keywordtype}{int}\ data);}
-\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{void}\ deleteItem(\textcolor{keywordtype}{int}\ data);}
-\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{void}\ showList();}
-\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordtype}{void}\ donda();}
-\DoxyCodeLine{00038\ }
-\DoxyCodeLine{00039\ \};}
-\DoxyCodeLine{00040\ }
-\DoxyCodeLine{00041\ }
-\DoxyCodeLine{00042\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//TAREAEXTRACLASE1DATOS2\_LIST\_H}}
+\DoxyCodeLine{00026\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_list}{List}}\ \{}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keyword}{friend}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_node}{Node}};}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keyword}{friend}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_collector}{Collector}};}
+\DoxyCodeLine{00029\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00033\ \ \ \ \ \mbox{\hyperlink{class_node}{Node}}*\ \mbox{\hyperlink{class_list_addd8b20dd6fe028dddccd4ac295d1156}{headPtr}};\ \textcolor{comment}{//\ puntero\ al\ head}}
+\DoxyCodeLine{00037\ \textcolor{comment}{}\ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_list_ac41719eafdd551f0dcee8f3ce67ececc}{size}};\ \textcolor{comment}{//\ size\ de\ lista}}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{comment}{//Collector*\ reciclaje;\ //ptr\ a\ collector}}
+\DoxyCodeLine{00042\ \textcolor{comment}{}\ \ \ \ \mbox{\hyperlink{class_list_a64d878a92d11f7c63c70cbe4e7dd4176}{List}}()\{\ \textcolor{comment}{//\ constructor,\ siempre\ sin\ nodos}}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_list_ac41719eafdd551f0dcee8f3ce67ececc}{size}}\ =\ 0;}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \textcolor{comment}{//reciclaje\ =\ new\ Collector();}}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_list_addd8b20dd6fe028dddccd4ac295d1156}{headPtr}}\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ std::cout<<\textcolor{stringliteral}{"{}HE"{}};}
+\DoxyCodeLine{00048\ \ \ \ \ \}}
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_list_aa53f7e68ff3a597ba3cf81368c3c252a}{setHeadData}}(\textcolor{keywordtype}{int}\ data);}
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_list_a5a42625d2ef60184771dce63614913ab}{getHeadData}}();}
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_list_a8bd34457b738fc2f7c8ca376f3cf1bf5}{insertLast}}(\textcolor{keywordtype}{int}\ data);}
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_list_abd6c408c17a6ff9404401526b50105d9}{insertFirst}}(\textcolor{keywordtype}{int}\ data);}
+\DoxyCodeLine{00073\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_list_aff6cd7ee6b39e4ef57a0ccf721f058e4}{deleteItem}}(\textcolor{keywordtype}{int}\ data);}
+\DoxyCodeLine{00077\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_list_a91852c3a72c1d8078db45fc8127e8232}{showList}}();}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00079\ \};}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00082\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//TAREAEXTRACLASE1DATOS2\_LIST\_H}}
 
 \end{DoxyCode}

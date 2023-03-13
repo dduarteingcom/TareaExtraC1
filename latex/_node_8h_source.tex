@@ -10,55 +10,55 @@
 \DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <fstream>}}
 \DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <iostream>}}
 \DoxyCodeLine{00014\ }
-\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ "{}List.h"{}}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_list_8h}{List.h}}"{}}}
 \DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_collector_8h}{Collector.h}}"{}}}
 \DoxyCodeLine{00020\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_collector}{Collector}};}
-\DoxyCodeLine{00021\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_list}{List}};}
-\DoxyCodeLine{00022\ }
-\DoxyCodeLine{00023\ \textcolor{keyword}{using\ namespace\ }std;}
-\DoxyCodeLine{00027\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_node}{Node}}\ \{}
-\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keyword}{friend}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_list}{List}};}
-\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keyword}{friend}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_collector}{Collector}};}
-\DoxyCodeLine{00030\ }
-\DoxyCodeLine{00031\ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_node_a87c003c9f600e3fc58e6e90835f0b605}{data}};\ \textcolor{comment}{//\ data\ del\ nodo}}
-\DoxyCodeLine{00039\ \textcolor{comment}{}\ \ \ \ \mbox{\hyperlink{class_node}{Node}}*\ \mbox{\hyperlink{class_node_acd118bcb610d974f84a15c164656b375}{nextPtr}};\ \textcolor{comment}{//\ puntero\ al\ siguiente\ nodo}}
-\DoxyCodeLine{00043\ \textcolor{comment}{}\ \ \ \ \mbox{\hyperlink{class_node_ad7a34779cad45d997bfd6d3d8043c75f}{Node}}()\{\ \textcolor{comment}{//\ constructor\ sin\ data}}
-\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_node_a87c003c9f600e3fc58e6e90835f0b605}{data}}\ =\ 0;}
-\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_node_acd118bcb610d974f84a15c164656b375}{nextPtr}}\ =\ \textcolor{keyword}{nullptr};}
-\DoxyCodeLine{00046\ }
-\DoxyCodeLine{00047\ \ \ \ \ \}}
-\DoxyCodeLine{00052\ \ \ \ \ \mbox{\hyperlink{class_node_a00b0cd3337cc135b4a2771fd16139d72}{Node}}\ (\textcolor{keywordtype}{int}\ x)\{\ \textcolor{comment}{//\ constructor\ con\ data}}
-\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_node_a87c003c9f600e3fc58e6e90835f0b605}{data}}\ =\ x;}
-\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_node_acd118bcb610d974f84a15c164656b375}{nextPtr}}\ =\ \textcolor{keyword}{nullptr};}
-\DoxyCodeLine{00055\ \ \ \ \ \}}
-\DoxyCodeLine{00061\ \ \ \ \ \mbox{\hyperlink{class_node_a809af93606bbca2942ffad8b0a5bf2cd}{Node}}\ (\textcolor{keywordtype}{int}\ x,\ \mbox{\hyperlink{class_node}{Node}}*\ sig)\{\ \textcolor{comment}{//\ constructor\ con\ data\ y\ ptr\ al\ siguiente}}
-\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_node_a87c003c9f600e3fc58e6e90835f0b605}{data}}\ =\ x;}
-\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_node_acd118bcb610d974f84a15c164656b375}{nextPtr}}\ =\ sig;}
-\DoxyCodeLine{00064\ \ \ \ \ \}}
-\DoxyCodeLine{00070\ \ \ \ \ \mbox{\hyperlink{class_node_af4cee4963dc13f3c7e02a9679422090d}{Node}}(\textcolor{keywordtype}{int}\ x,\ \mbox{\hyperlink{class_collector}{Collector}}*\ y)\{}
-\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_node_a87c003c9f600e3fc58e6e90835f0b605}{data}}\ =\ x;}
-\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_node_acd118bcb610d974f84a15c164656b375}{nextPtr}}\ =\ \textcolor{keyword}{nullptr};}
-\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ std::cout<<\textcolor{stringliteral}{"{}HI"{}};}
-\DoxyCodeLine{00074\ \ \ \ \ \}}
-\DoxyCodeLine{00081\ \ \ \ \ \mbox{\hyperlink{class_node_a099ef3c6c64919057c3ffdc4b5677fe3}{Node}}\ (\textcolor{keywordtype}{int}\ x,\ \mbox{\hyperlink{class_node}{Node}}*\ sig,\ \mbox{\hyperlink{class_collector}{Collector}}*\ y)\{\ \textcolor{comment}{//\ constructor\ con\ data\ y\ ptr\ al\ siguiente}}
-\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_node_a87c003c9f600e3fc58e6e90835f0b605}{data}}\ =\ x;}
-\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_node_acd118bcb610d974f84a15c164656b375}{nextPtr}}\ =\ sig;}
-\DoxyCodeLine{00084\ \ \ \ \ \}}
-\DoxyCodeLine{00089\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_node_a926870aa6f903b74c66cb2c35c7431d3}{setData}}(\textcolor{keywordtype}{int}\ x);}
-\DoxyCodeLine{00094\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_node_a590f6f85700110f8041f7b4f432c2c3f}{setNextPtr}}(\mbox{\hyperlink{class_node}{Node}}*\ x);}
-\DoxyCodeLine{00099\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_node_aca98907146d5d0687f48bf8be9df9b7d}{getData}}();}
-\DoxyCodeLine{00104\ \ \ \ \ \mbox{\hyperlink{class_node}{Node}}*\ \mbox{\hyperlink{class_node_af2c2b0c3b158af24e4652e020cf685e7}{getNextPtr}}();}
-\DoxyCodeLine{00109\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_node_a045391d672c0e61bc5e502f4d899b2ed}{setPtrReciclaje}}(\mbox{\hyperlink{class_collector}{Collector}}*\ collector);}
-\DoxyCodeLine{00113\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_collector}{Collector}}*\ \mbox{\hyperlink{class_node_af8e53587c8778a342c09d38d4775bda8}{ptrReciclaje}};}
-\DoxyCodeLine{00119\ \ \ \ \ \textcolor{keywordtype}{void}\ *\ \textcolor{keyword}{operator}\ \textcolor{keyword}{new}(\textcolor{keywordtype}{size\_t}\ size);\ \textcolor{comment}{//\ overload\ de\ new}}
-\DoxyCodeLine{00124\ \textcolor{comment}{}\ \ \ \ \textcolor{keywordtype}{void}\ \textcolor{keyword}{operator}\ \textcolor{keyword}{delete}(\textcolor{keywordtype}{void}\ *\ p);}
-\DoxyCodeLine{00125\ }
-\DoxyCodeLine{00126\ }
-\DoxyCodeLine{00127\ }
-\DoxyCodeLine{00128\ \};}
+\DoxyCodeLine{00024\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_list}{List}};}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{00030\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_node}{Node}}\ \{}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keyword}{friend}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_list}{List}};}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keyword}{friend}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_collector}{Collector}};}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_node_a87c003c9f600e3fc58e6e90835f0b605}{data}};\ \textcolor{comment}{//\ data\ del\ nodo}}
+\DoxyCodeLine{00042\ \textcolor{comment}{}\ \ \ \ \mbox{\hyperlink{class_node}{Node}}*\ \mbox{\hyperlink{class_node_acd118bcb610d974f84a15c164656b375}{nextPtr}};\ \textcolor{comment}{//\ puntero\ al\ siguiente\ nodo}}
+\DoxyCodeLine{00046\ \textcolor{comment}{}\ \ \ \ \mbox{\hyperlink{class_node_ad7a34779cad45d997bfd6d3d8043c75f}{Node}}()\{\ \textcolor{comment}{//\ constructor\ sin\ data}}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_node_a87c003c9f600e3fc58e6e90835f0b605}{data}}\ =\ 0;}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_node_acd118bcb610d974f84a15c164656b375}{nextPtr}}\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \ \ \ \ \}}
+\DoxyCodeLine{00055\ \ \ \ \ \mbox{\hyperlink{class_node_a00b0cd3337cc135b4a2771fd16139d72}{Node}}\ (\textcolor{keywordtype}{int}\ x)\{\ \textcolor{comment}{//\ constructor\ con\ data}}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_node_a87c003c9f600e3fc58e6e90835f0b605}{data}}\ =\ x;}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_node_acd118bcb610d974f84a15c164656b375}{nextPtr}}\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00058\ \ \ \ \ \}}
+\DoxyCodeLine{00064\ \ \ \ \ \mbox{\hyperlink{class_node_a809af93606bbca2942ffad8b0a5bf2cd}{Node}}\ (\textcolor{keywordtype}{int}\ x,\ \mbox{\hyperlink{class_node}{Node}}*\ sig)\{\ \textcolor{comment}{//\ constructor\ con\ data\ y\ ptr\ al\ siguiente}}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_node_a87c003c9f600e3fc58e6e90835f0b605}{data}}\ =\ x;}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_node_acd118bcb610d974f84a15c164656b375}{nextPtr}}\ =\ sig;}
+\DoxyCodeLine{00067\ \ \ \ \ \}}
+\DoxyCodeLine{00073\ \ \ \ \ \mbox{\hyperlink{class_node_af4cee4963dc13f3c7e02a9679422090d}{Node}}(\textcolor{keywordtype}{int}\ x,\ \mbox{\hyperlink{class_collector}{Collector}}*\ y)\{}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_node_a87c003c9f600e3fc58e6e90835f0b605}{data}}\ =\ x;}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_node_acd118bcb610d974f84a15c164656b375}{nextPtr}}\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ std::cout<<\textcolor{stringliteral}{"{}HI"{}};}
+\DoxyCodeLine{00077\ \ \ \ \ \}}
+\DoxyCodeLine{00084\ \ \ \ \ \mbox{\hyperlink{class_node_a099ef3c6c64919057c3ffdc4b5677fe3}{Node}}\ (\textcolor{keywordtype}{int}\ x,\ \mbox{\hyperlink{class_node}{Node}}*\ sig,\ \mbox{\hyperlink{class_collector}{Collector}}*\ y)\{\ \textcolor{comment}{//\ constructor\ con\ data\ y\ ptr\ al\ siguiente}}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_node_a87c003c9f600e3fc58e6e90835f0b605}{data}}\ =\ x;}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_node_acd118bcb610d974f84a15c164656b375}{nextPtr}}\ =\ sig;}
+\DoxyCodeLine{00087\ \ \ \ \ \}}
+\DoxyCodeLine{00092\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_node_a926870aa6f903b74c66cb2c35c7431d3}{setData}}(\textcolor{keywordtype}{int}\ x);}
+\DoxyCodeLine{00097\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_node_a590f6f85700110f8041f7b4f432c2c3f}{setNextPtr}}(\mbox{\hyperlink{class_node}{Node}}*\ x);}
+\DoxyCodeLine{00102\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_node_aca98907146d5d0687f48bf8be9df9b7d}{getData}}();}
+\DoxyCodeLine{00107\ \ \ \ \ \mbox{\hyperlink{class_node}{Node}}*\ \mbox{\hyperlink{class_node_af2c2b0c3b158af24e4652e020cf685e7}{getNextPtr}}();}
+\DoxyCodeLine{00112\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_node_a045391d672c0e61bc5e502f4d899b2ed}{setPtrReciclaje}}(\mbox{\hyperlink{class_collector}{Collector}}*\ collector);}
+\DoxyCodeLine{00116\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_collector}{Collector}}*\ \mbox{\hyperlink{class_node_af8e53587c8778a342c09d38d4775bda8}{ptrReciclaje}};}
+\DoxyCodeLine{00122\ \ \ \ \ \textcolor{keywordtype}{void}\ *\ \textcolor{keyword}{operator}\ \textcolor{keyword}{new}(\textcolor{keywordtype}{size\_t}\ size);\ \textcolor{comment}{//\ overload\ de\ new}}
+\DoxyCodeLine{00127\ \textcolor{comment}{}\ \ \ \ \textcolor{keywordtype}{void}\ \textcolor{keyword}{operator}\ \textcolor{keyword}{delete}(\textcolor{keywordtype}{void}\ *\ p);}
+\DoxyCodeLine{00128\ }
 \DoxyCodeLine{00129\ }
 \DoxyCodeLine{00130\ }
-\DoxyCodeLine{00131\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//TAREAEXTRACLASE1DATOS2\_NODE\_H}}
+\DoxyCodeLine{00131\ \};}
+\DoxyCodeLine{00132\ }
+\DoxyCodeLine{00133\ }
+\DoxyCodeLine{00134\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//TAREAEXTRACLASE1DATOS2\_NODE\_H}}
 
 \end{DoxyCode}

@@ -1,38 +1,42 @@
 \hypertarget{class_list}{}\doxysection{List Class Reference}
 \label{class_list}\index{List@{List}}
+
+
+Lista simplente enlazada que inserta y elimina nodos.  
+
+
+
+
+{\ttfamily \#include $<$List.\+h$>$}
+
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_list_aa53f7e68ff3a597ba3cf81368c3c252a}\label{class_list_aa53f7e68ff3a597ba3cf81368c3c252a}} 
-void {\bfseries set\+Head\+Data} (int data)
-\item 
-\mbox{\Hypertarget{class_list_a5a42625d2ef60184771dce63614913ab}\label{class_list_a5a42625d2ef60184771dce63614913ab}} 
-int {\bfseries get\+Head\+Data} ()
-\item 
-\mbox{\Hypertarget{class_list_a8bd34457b738fc2f7c8ca376f3cf1bf5}\label{class_list_a8bd34457b738fc2f7c8ca376f3cf1bf5}} 
-void {\bfseries insert\+Last} (int data)
-\item 
-\mbox{\Hypertarget{class_list_abd6c408c17a6ff9404401526b50105d9}\label{class_list_abd6c408c17a6ff9404401526b50105d9}} 
-void {\bfseries insert\+First} (int data)
-\item 
-\mbox{\Hypertarget{class_list_aff6cd7ee6b39e4ef57a0ccf721f058e4}\label{class_list_aff6cd7ee6b39e4ef57a0ccf721f058e4}} 
-void {\bfseries delete\+Item} (int data)
-\item 
+\mbox{\Hypertarget{class_list_a64d878a92d11f7c63c70cbe4e7dd4176}\label{class_list_a64d878a92d11f7c63c70cbe4e7dd4176}} 
+{\bfseries List} ()
+\begin{DoxyCompactList}\small\item\em Constructor de la clase \mbox{\hyperlink{class_list}{List}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_list_aa53f7e68ff3a597ba3cf81368c3c252a}{set\+Head\+Data}} (int data)
+\begin{DoxyCompactList}\small\item\em Modifica la data de la cabeza de la lista. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_list_a5a42625d2ef60184771dce63614913ab}{get\+Head\+Data}} ()
+\begin{DoxyCompactList}\small\item\em Retorna la data de la cabeza de la lista. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_list_a8bd34457b738fc2f7c8ca376f3cf1bf5}{insert\+Last}} (int data)
+\begin{DoxyCompactList}\small\item\em Inserta nodos al final de la lista. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_list_abd6c408c17a6ff9404401526b50105d9}{insert\+First}} (int data)
+\begin{DoxyCompactList}\small\item\em Inserta nodos al inicio de la lista. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_list_aff6cd7ee6b39e4ef57a0ccf721f058e4}{delete\+Item}} (int data)
+\begin{DoxyCompactList}\small\item\em Elimina nodo de la lista. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{class_list_a91852c3a72c1d8078db45fc8127e8232}\label{class_list_a91852c3a72c1d8078db45fc8127e8232}} 
 void {\bfseries show\+List} ()
-\item 
-\mbox{\Hypertarget{class_list_ace921b6f029b69bcfcb7e2449a5f0fb4}\label{class_list_ace921b6f029b69bcfcb7e2449a5f0fb4}} 
-void {\bfseries donda} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Método que muestra todas las data de los nodos presentes en la lista. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\Hypertarget{class_list_addd8b20dd6fe028dddccd4ac295d1156}\label{class_list_addd8b20dd6fe028dddccd4ac295d1156}} 
 \mbox{\hyperlink{class_node}{Node}} $\ast$ {\bfseries head\+Ptr}
-\item 
+\begin{DoxyCompactList}\small\item\em Puntero hacia la cabeza de la lista. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{class_list_ac41719eafdd551f0dcee8f3ce67ececc}\label{class_list_ac41719eafdd551f0dcee8f3ce67ececc}} 
 int {\bfseries size}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Tamaño de la lista. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Friends}
 \begin{DoxyCompactItemize}
 \item 
@@ -44,7 +48,86 @@ class {\bfseries Collector}
 \end{DoxyCompactItemize}
 
 
+\doxysubsection{Detailed Description}
+Lista simplente enlazada que inserta y elimina nodos. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_list_aff6cd7ee6b39e4ef57a0ccf721f058e4}\label{class_list_aff6cd7ee6b39e4ef57a0ccf721f058e4}} 
+\index{List@{List}!deleteItem@{deleteItem}}
+\index{deleteItem@{deleteItem}!List@{List}}
+\doxysubsubsection{\texorpdfstring{deleteItem()}{deleteItem()}}
+{\footnotesize\ttfamily void List\+::delete\+Item (\begin{DoxyParamCaption}\item[{int}]{data }\end{DoxyParamCaption})}
+
+
+
+Elimina nodo de la lista. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & Data con la que se buscará el nodo a eliminar. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_list_a5a42625d2ef60184771dce63614913ab}\label{class_list_a5a42625d2ef60184771dce63614913ab}} 
+\index{List@{List}!getHeadData@{getHeadData}}
+\index{getHeadData@{getHeadData}!List@{List}}
+\doxysubsubsection{\texorpdfstring{getHeadData()}{getHeadData()}}
+{\footnotesize\ttfamily int List\+::get\+Head\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Retorna la data de la cabeza de la lista. 
+
+\begin{DoxyReturn}{Returns}
+Data de la cabeza. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_list_abd6c408c17a6ff9404401526b50105d9}\label{class_list_abd6c408c17a6ff9404401526b50105d9}} 
+\index{List@{List}!insertFirst@{insertFirst}}
+\index{insertFirst@{insertFirst}!List@{List}}
+\doxysubsubsection{\texorpdfstring{insertFirst()}{insertFirst()}}
+{\footnotesize\ttfamily void List\+::insert\+First (\begin{DoxyParamCaption}\item[{int}]{data }\end{DoxyParamCaption})}
+
+
+
+Inserta nodos al inicio de la lista. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & Data que tendrá el nodo. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_list_a8bd34457b738fc2f7c8ca376f3cf1bf5}\label{class_list_a8bd34457b738fc2f7c8ca376f3cf1bf5}} 
+\index{List@{List}!insertLast@{insertLast}}
+\index{insertLast@{insertLast}!List@{List}}
+\doxysubsubsection{\texorpdfstring{insertLast()}{insertLast()}}
+{\footnotesize\ttfamily void List\+::insert\+Last (\begin{DoxyParamCaption}\item[{int}]{data }\end{DoxyParamCaption})}
+
+
+
+Inserta nodos al final de la lista. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & Data que tendrá el nodo. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_list_aa53f7e68ff3a597ba3cf81368c3c252a}\label{class_list_aa53f7e68ff3a597ba3cf81368c3c252a}} 
+\index{List@{List}!setHeadData@{setHeadData}}
+\index{setHeadData@{setHeadData}!List@{List}}
+\doxysubsubsection{\texorpdfstring{setHeadData()}{setHeadData()}}
+{\footnotesize\ttfamily void List\+::set\+Head\+Data (\begin{DoxyParamCaption}\item[{int}]{data }\end{DoxyParamCaption})}
+
+
+
+Modifica la data de la cabeza de la lista. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & Nueva data. \\
+\hline
+\end{DoxyParams}
+
+
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-List.\+h\item 
+\mbox{\hyperlink{_list_8h}{List.\+h}}\item 
 List.\+cpp\end{DoxyCompactItemize}

@@ -152,6 +152,3 @@ void List::showList(){
         cout << endl;
     }
 }
-void List::donda(){
-    cout << "kanye" << endl;
-}

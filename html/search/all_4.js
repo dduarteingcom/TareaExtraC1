@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['insertf_0',['insertF',['../class_collector.html#a2a393918484dc00b8d53c09184ea1ad4',1,'Collector']]]
+  ['headptr_0',['headPtr',['../class_list.html#addd8b20dd6fe028dddccd4ac295d1156',1,'List']]]
 ];
