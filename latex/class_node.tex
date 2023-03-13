@@ -1,0 +1,253 @@
+\hypertarget{class_node}{}\doxysection{Node Class Reference}
+\label{class_node}\index{Node@{Node}}
+
+
+Nodo que almacena un entero.  
+
+
+
+
+{\ttfamily \#include $<$Node.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_node_ad7a34779cad45d997bfd6d3d8043c75f}\label{class_node_ad7a34779cad45d997bfd6d3d8043c75f}} 
+{\bfseries Node} ()
+\begin{DoxyCompactList}\small\item\em Constructor sin data. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_node_a00b0cd3337cc135b4a2771fd16139d72}{Node}} (int x)
+\begin{DoxyCompactList}\small\item\em Constructor con data. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_node_a809af93606bbca2942ffad8b0a5bf2cd}{Node}} (int x, \mbox{\hyperlink{class_node}{Node}} $\ast$sig)
+\begin{DoxyCompactList}\small\item\em Constructor con data y ptr al siguiente. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_node_af4cee4963dc13f3c7e02a9679422090d}{Node}} (int x, \mbox{\hyperlink{class_collector}{Collector}} $\ast$y)
+\begin{DoxyCompactList}\small\item\em Constructor con data y puntero a collector. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_node_a099ef3c6c64919057c3ffdc4b5677fe3}{Node}} (int x, \mbox{\hyperlink{class_node}{Node}} $\ast$sig, \mbox{\hyperlink{class_collector}{Collector}} $\ast$y)
+\begin{DoxyCompactList}\small\item\em Constructor con data, siguiente nodo y puntero a collector. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_node_a926870aa6f903b74c66cb2c35c7431d3}{set\+Data}} (int x)
+\begin{DoxyCompactList}\small\item\em Modifica la data del nodo. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_node_a590f6f85700110f8041f7b4f432c2c3f}{set\+Next\+Ptr}} (\mbox{\hyperlink{class_node}{Node}} $\ast$x)
+\begin{DoxyCompactList}\small\item\em Modifica el nodo siguiente del nodo seleccionado. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_node_aca98907146d5d0687f48bf8be9df9b7d}{get\+Data}} ()
+\begin{DoxyCompactList}\small\item\em Se obtiene la data del nodo. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_node}{Node}} $\ast$ \mbox{\hyperlink{class_node_af2c2b0c3b158af24e4652e020cf685e7}{get\+Next\+Ptr}} ()
+\begin{DoxyCompactList}\small\item\em Se obtiene el nodo que le sigue al seleccionado. \end{DoxyCompactList}\item 
+void $\ast$ \mbox{\hyperlink{class_node_ad93f4bb54e5f2759c8f903fd2d740267}{operator new}} (size\+\_\+t size)
+\begin{DoxyCompactList}\small\item\em Sobrecarga del método new para almacenar datos en el heap. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_node_a5e1c4d489ad2b220b54c04cac5d3950d}{operator delete}} (void $\ast$p)
+\begin{DoxyCompactList}\small\item\em Sobrecarga del método delete para eliminar del heap el nodo creado. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{class_node_a045391d672c0e61bc5e502f4d899b2ed}{set\+Ptr\+Reciclaje}} (\mbox{\hyperlink{class_collector}{Collector}} $\ast$collector)
+\begin{DoxyCompactList}\small\item\em Modifica el puntero hacia la instacia ptr\+Reciclaje de tipo \mbox{\hyperlink{class_collector}{Collector}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_node_a87c003c9f600e3fc58e6e90835f0b605}\label{class_node_a87c003c9f600e3fc58e6e90835f0b605}} 
+int {\bfseries data}
+\begin{DoxyCompactList}\small\item\em entero almacenado dentro de \mbox{\hyperlink{class_node}{Node}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_node_acd118bcb610d974f84a15c164656b375}\label{class_node_acd118bcb610d974f84a15c164656b375}} 
+\mbox{\hyperlink{class_node}{Node}} $\ast$ {\bfseries next\+Ptr}
+\begin{DoxyCompactList}\small\item\em Puntero hacia el siguiente nodo. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_node_af8e53587c8778a342c09d38d4775bda8}\label{class_node_af8e53587c8778a342c09d38d4775bda8}} 
+static \mbox{\hyperlink{class_collector}{Collector}} $\ast$ {\bfseries ptr\+Reciclaje} = nullptr
+\begin{DoxyCompactList}\small\item\em Puntero hacia la instancia de tipo \mbox{\hyperlink{class_collector}{Collector}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_node_a8cee552d09eaeb60a09d95309a87b498}\label{class_node_a8cee552d09eaeb60a09d95309a87b498}} 
+class {\bfseries List}
+\item 
+\mbox{\Hypertarget{class_node_a85a0fc5a617106954db31a0e1233517f}\label{class_node_a85a0fc5a617106954db31a0e1233517f}} 
+class {\bfseries Collector}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Nodo que almacena un entero. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_node_a00b0cd3337cc135b4a2771fd16139d72}\label{class_node_a00b0cd3337cc135b4a2771fd16139d72}} 
+\index{Node@{Node}!Node@{Node}}
+\index{Node@{Node}!Node@{Node}}
+\doxysubsubsection{\texorpdfstring{Node()}{Node()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily Node\+::\+Node (\begin{DoxyParamCaption}\item[{int}]{x }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor con data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & Entero que será almacenado como data. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_node_a809af93606bbca2942ffad8b0a5bf2cd}\label{class_node_a809af93606bbca2942ffad8b0a5bf2cd}} 
+\index{Node@{Node}!Node@{Node}}
+\index{Node@{Node}!Node@{Node}}
+\doxysubsubsection{\texorpdfstring{Node()}{Node()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily Node\+::\+Node (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{\mbox{\hyperlink{class_node}{Node}} $\ast$}]{sig }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor con data y ptr al siguiente. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & Entero que será almacenado como data. \\
+\hline
+{\em sig} & Puntero hacia el siguiente nodo. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_node_af4cee4963dc13f3c7e02a9679422090d}\label{class_node_af4cee4963dc13f3c7e02a9679422090d}} 
+\index{Node@{Node}!Node@{Node}}
+\index{Node@{Node}!Node@{Node}}
+\doxysubsubsection{\texorpdfstring{Node()}{Node()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily Node\+::\+Node (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{\mbox{\hyperlink{class_collector}{Collector}} $\ast$}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor con data y puntero a collector. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & data \\
+\hline
+{\em y} & puntero a collector. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_node_a099ef3c6c64919057c3ffdc4b5677fe3}\label{class_node_a099ef3c6c64919057c3ffdc4b5677fe3}} 
+\index{Node@{Node}!Node@{Node}}
+\index{Node@{Node}!Node@{Node}}
+\doxysubsubsection{\texorpdfstring{Node()}{Node()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily Node\+::\+Node (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{\mbox{\hyperlink{class_node}{Node}} $\ast$}]{sig,  }\item[{\mbox{\hyperlink{class_collector}{Collector}} $\ast$}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor con data, siguiente nodo y puntero a collector. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & data. \\
+\hline
+{\em sig} & siguiente nodo del seleccionado. \\
+\hline
+{\em y} & puntero a \mbox{\hyperlink{class_collector}{Collector}}. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_node_aca98907146d5d0687f48bf8be9df9b7d}\label{class_node_aca98907146d5d0687f48bf8be9df9b7d}} 
+\index{Node@{Node}!getData@{getData}}
+\index{getData@{getData}!Node@{Node}}
+\doxysubsubsection{\texorpdfstring{getData()}{getData()}}
+{\footnotesize\ttfamily int Node\+::get\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Se obtiene la data del nodo. 
+
+\begin{DoxyReturn}{Returns}
+Data. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_node_af2c2b0c3b158af24e4652e020cf685e7}\label{class_node_af2c2b0c3b158af24e4652e020cf685e7}} 
+\index{Node@{Node}!getNextPtr@{getNextPtr}}
+\index{getNextPtr@{getNextPtr}!Node@{Node}}
+\doxysubsubsection{\texorpdfstring{getNextPtr()}{getNextPtr()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_node}{Node}} $\ast$ Node\+::get\+Next\+Ptr (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Se obtiene el nodo que le sigue al seleccionado. 
+
+\begin{DoxyReturn}{Returns}
+Nodo siguiente. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_node_a5e1c4d489ad2b220b54c04cac5d3950d}\label{class_node_a5e1c4d489ad2b220b54c04cac5d3950d}} 
+\index{Node@{Node}!operator delete@{operator delete}}
+\index{operator delete@{operator delete}!Node@{Node}}
+\doxysubsubsection{\texorpdfstring{operator delete()}{operator delete()}}
+{\footnotesize\ttfamily void Node\+::operator delete (\begin{DoxyParamCaption}\item[{void $\ast$}]{p }\end{DoxyParamCaption})}
+
+
+
+Sobrecarga del método delete para eliminar del heap el nodo creado. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & Nodo a eliminar. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_node_ad93f4bb54e5f2759c8f903fd2d740267}\label{class_node_ad93f4bb54e5f2759c8f903fd2d740267}} 
+\index{Node@{Node}!operator new@{operator new}}
+\index{operator new@{operator new}!Node@{Node}}
+\doxysubsubsection{\texorpdfstring{operator new()}{operator new()}}
+{\footnotesize\ttfamily void $\ast$ Node\+::operator new (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})}
+
+
+
+Sobrecarga del método new para almacenar datos en el heap. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em size} & Tamaño en bytes requeridos para guardar en heap. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Puntero hacia el nuevo nodo creado. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_node_a926870aa6f903b74c66cb2c35c7431d3}\label{class_node_a926870aa6f903b74c66cb2c35c7431d3}} 
+\index{Node@{Node}!setData@{setData}}
+\index{setData@{setData}!Node@{Node}}
+\doxysubsubsection{\texorpdfstring{setData()}{setData()}}
+{\footnotesize\ttfamily void Node\+::set\+Data (\begin{DoxyParamCaption}\item[{int}]{x }\end{DoxyParamCaption})}
+
+
+
+Modifica la data del nodo. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & Nuevo entero para la data. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_node_a590f6f85700110f8041f7b4f432c2c3f}\label{class_node_a590f6f85700110f8041f7b4f432c2c3f}} 
+\index{Node@{Node}!setNextPtr@{setNextPtr}}
+\index{setNextPtr@{setNextPtr}!Node@{Node}}
+\doxysubsubsection{\texorpdfstring{setNextPtr()}{setNextPtr()}}
+{\footnotesize\ttfamily void Node\+::set\+Next\+Ptr (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_node}{Node}} $\ast$}]{x }\end{DoxyParamCaption})}
+
+
+
+Modifica el nodo siguiente del nodo seleccionado. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & Puntero hacia el nuevo siguiente. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_node_a045391d672c0e61bc5e502f4d899b2ed}\label{class_node_a045391d672c0e61bc5e502f4d899b2ed}} 
+\index{Node@{Node}!setPtrReciclaje@{setPtrReciclaje}}
+\index{setPtrReciclaje@{setPtrReciclaje}!Node@{Node}}
+\doxysubsubsection{\texorpdfstring{setPtrReciclaje()}{setPtrReciclaje()}}
+{\footnotesize\ttfamily void Node\+::set\+Ptr\+Reciclaje (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_collector}{Collector}} $\ast$}]{collector }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Modifica el puntero hacia la instacia ptr\+Reciclaje de tipo \mbox{\hyperlink{class_collector}{Collector}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em collector} & Puntero hacia la instancia de tipo \mbox{\hyperlink{class_collector}{Collector}}. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_node_8h}{Node.\+h}}\item 
+Node.\+cpp\end{DoxyCompactItemize}

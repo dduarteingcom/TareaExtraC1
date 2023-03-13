@@ -1,0 +1,94 @@
+\hypertarget{class_collector}{}\doxysection{Collector Class Reference}
+\label{class_collector}\index{Collector@{Collector}}
+
+
+Lista enlazada simple que almacena la dirección en memoria de los nodos eliminados por la clase list.  
+
+
+
+
+{\ttfamily \#include $<$Collector.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_collector_ad60b06491094b8fddf25502cf162cdf6}\label{class_collector_ad60b06491094b8fddf25502cf162cdf6}} 
+{\bfseries Collector} ()
+\begin{DoxyCompactList}\small\item\em Constructor de \mbox{\hyperlink{class_collector}{Collector}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_collector_a2a393918484dc00b8d53c09184ea1ad4}{insertF}} (\mbox{\hyperlink{class_node}{Node}} $\ast$x)
+\begin{DoxyCompactList}\small\item\em Método que inserta el puntero resibido al principio de la lista. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_node}{Node}} $\ast$ \mbox{\hyperlink{class_collector_ab65549f053267525d843ef21504ee89a}{deleteF}} ()
+\begin{DoxyCompactList}\small\item\em Método que elimina de colector el primer puntero. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_collector_a8e958786cae05886eefec85df89f1a94}{available}} ()
+\begin{DoxyCompactList}\small\item\em Método que comprueba si el collector posee elementos que puedan ser usados en la clase \mbox{\hyperlink{class_list}{List}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_collector_ad7d7dce5b58130944acd666adecb5008}\label{class_collector_ad7d7dce5b58130944acd666adecb5008}} 
+void {\bfseries show\+Col} ()
+\begin{DoxyCompactList}\small\item\em Método que muestra todas direcciones en memoria guardadas en el \mbox{\hyperlink{class_collector}{Collector}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_collector_aeddcb77cf4b70d25938273fd3a4614ee}\label{class_collector_aeddcb77cf4b70d25938273fd3a4614ee}} 
+\mbox{\hyperlink{class_node}{Node}} $\ast$ {\bfseries c\+Head\+Ptr}
+\begin{DoxyCompactList}\small\item\em Puntero que corresponde al primer elemento almacenado en \mbox{\hyperlink{class_collector}{Collector}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_collector_a8cee552d09eaeb60a09d95309a87b498}\label{class_collector_a8cee552d09eaeb60a09d95309a87b498}} 
+class \mbox{\hyperlink{class_collector_a8cee552d09eaeb60a09d95309a87b498}{List}}
+\begin{DoxyCompactList}\small\item\em Se le da acceso a las clases \mbox{\hyperlink{class_list}{List}} y \mbox{\hyperlink{class_node}{Node}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_collector_aed91756449328e2c454e53e9c5e53936}\label{class_collector_aed91756449328e2c454e53e9c5e53936}} 
+class {\bfseries Node}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Lista enlazada simple que almacena la dirección en memoria de los nodos eliminados por la clase list. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_collector_a8e958786cae05886eefec85df89f1a94}\label{class_collector_a8e958786cae05886eefec85df89f1a94}} 
+\index{Collector@{Collector}!available@{available}}
+\index{available@{available}!Collector@{Collector}}
+\doxysubsubsection{\texorpdfstring{available()}{available()}}
+{\footnotesize\ttfamily bool Collector\+::available (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Método que comprueba si el collector posee elementos que puedan ser usados en la clase \mbox{\hyperlink{class_list}{List}}. 
+
+\begin{DoxyReturn}{Returns}
+Retorna true o false 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_collector_ab65549f053267525d843ef21504ee89a}\label{class_collector_ab65549f053267525d843ef21504ee89a}} 
+\index{Collector@{Collector}!deleteF@{deleteF}}
+\index{deleteF@{deleteF}!Collector@{Collector}}
+\doxysubsubsection{\texorpdfstring{deleteF()}{deleteF()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_node}{Node}} $\ast$ Collector\+::deleteF (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Método que elimina de colector el primer puntero. 
+
+\begin{DoxyReturn}{Returns}
+Puntero eliminado. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_collector_a2a393918484dc00b8d53c09184ea1ad4}\label{class_collector_a2a393918484dc00b8d53c09184ea1ad4}} 
+\index{Collector@{Collector}!insertF@{insertF}}
+\index{insertF@{insertF}!Collector@{Collector}}
+\doxysubsubsection{\texorpdfstring{insertF()}{insertF()}}
+{\footnotesize\ttfamily void Collector\+::insertF (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_node}{Node}} $\ast$}]{x }\end{DoxyParamCaption})}
+
+
+
+Método que inserta el puntero resibido al principio de la lista. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & Puntero que será añadido. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_collector_8h}{Collector.\+h}}\item 
+Collector.\+cpp\end{DoxyCompactItemize}

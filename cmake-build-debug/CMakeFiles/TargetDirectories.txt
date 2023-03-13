@@ -1,3 +1,3 @@
-/home/esteban/CLionProjects/tareaExtraClase1Datos2/cmake-build-debug/CMakeFiles/tareaExtraClase1Datos2.dir
-/home/esteban/CLionProjects/tareaExtraClase1Datos2/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/esteban/CLionProjects/tareaExtraClase1Datos2/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+C:/Users/PC/Documents/GitHub/TareaExtraC1/cmake-build-debug/CMakeFiles/tareaExtraClase1Datos2.dir
+C:/Users/PC/Documents/GitHub/TareaExtraC1/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/PC/Documents/GitHub/TareaExtraC1/cmake-build-debug/CMakeFiles/rebuild_cache.dir

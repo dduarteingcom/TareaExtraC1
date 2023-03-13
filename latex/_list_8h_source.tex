@@ -1,0 +1,47 @@
+\hypertarget{_list_8h_source}{}\doxysection{List.\+h}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//}}
+\DoxyCodeLine{00002\ \textcolor{comment}{//\ Created\ by\ esteban\ on\ 3/12/23.}}
+\DoxyCodeLine{00003\ \textcolor{comment}{//}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#ifndef\ TAREAEXTRACLASE1DATOS2\_LIST\_H}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#define\ TAREAEXTRACLASE1DATOS2\_LIST\_H}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_node_8h}{Node.h}}"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_collector_8h}{Collector.h}}"{}}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_node}{Node}};}
+\DoxyCodeLine{00012\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_collector}{Collector}};}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_list}{List}}\ \{}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keyword}{friend}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_node}{Node}};}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keyword}{friend}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_collector}{Collector}};}
+\DoxyCodeLine{00018\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00019\ \ \ \ \ \mbox{\hyperlink{class_node}{Node}}*\ headPtr;\ \textcolor{comment}{//\ puntero\ al\ head}}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordtype}{int}\ size;\ \textcolor{comment}{//\ size\ de\ lista}}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{comment}{//Collector*\ reciclaje;\ //ptr\ a\ collector}}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \ \ \ \ \mbox{\hyperlink{class_list}{List}}()\{\ \textcolor{comment}{//\ constructor,\ siempre\ sin\ nodos}}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ size\ =\ 0;}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \textcolor{comment}{//reciclaje\ =\ new\ Collector();}}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ headPtr\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ std::cout<<\textcolor{stringliteral}{"{}HE"{}};}
+\DoxyCodeLine{00029\ \ \ \ \ \}}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordtype}{void}\ setHeadData(\textcolor{keywordtype}{int}\ data);}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{int}\ getHeadData();}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{void}\ insertLast(\textcolor{keywordtype}{int}\ data);}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordtype}{void}\ insertFirst(\textcolor{keywordtype}{int}\ data);}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{void}\ deleteItem(\textcolor{keywordtype}{int}\ data);}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{void}\ showList();}
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordtype}{void}\ donda();}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \};}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//TAREAEXTRACLASE1DATOS2\_LIST\_H}}
+
+\end{DoxyCode}
