@@ -1,13 +1,15 @@
 #include <iostream>
-#include <fstream>
-#include "List.h"
+
 #include "Node.h"
-#include "Collector.h"
+#include "List.h"
 
 using namespace std;
 
-int main(){
+int main() {
+    cout<< "Inicio" << endl;
 
+    Collector* ptrReciclaje = new Collector();
+    Node::setPtrReciclaje(ptrReciclaje);
     List nuevaLista;
 
     nuevaLista.insertFirst(99);
@@ -16,11 +18,13 @@ int main(){
     nuevaLista.insertLast(102);
     nuevaLista.insertLast(103);
 
-    //nuevaLista.showList();
+    nuevaLista.donda();
 
-    nuevaLista.deleteItem(99);
+    nuevaLista.showList();
 
-    //nuevaLista.showList();
+    nuevaLista.deleteItem(99); //aca ver
+
+    nuevaLista.showList();
 
     nuevaLista.deleteItem(101);
     nuevaLista.deleteItem(102);
@@ -29,19 +33,12 @@ int main(){
     nuevaLista.showList();
     cout << "AAAAAAAAAAAAAAAAAAAAAA";
     nuevaLista.insertFirst(25);
-    
+
     nuevaLista.insertLast(9);
 
     nuevaLista.showList();
-    nuevaLista.reciclaje->showCol();
-    
-    
-    
 
-    
-    
 
-    //FILO
 
     return 0;
 }

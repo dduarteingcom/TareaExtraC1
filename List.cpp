@@ -1,11 +1,12 @@
-#include <iostream>
-#include <fstream>
+//
+// Created by esteban on 3/12/23.
+//
+
 #include "List.h"
 #include "Node.h"
 #include "Collector.h"
 
 using namespace std;
-
 
 void List::setHeadData(int data){
     if (size != 0){
@@ -52,7 +53,7 @@ void List::insertLast(int data){
         }
     }
     */
-   Node* newPtr = new Node(data);
+    Node* newPtr = new Node(data);
     if (headPtr == nullptr){
         headPtr = newPtr;
         size++;
@@ -70,7 +71,7 @@ void List::insertFirst(int data){
     /*
     if (reciclaje->available() != false){
         Node* newPtr = reciclaje->deleteF();
-        
+
         if (headPtr == nullptr){
             headPtr = newPtr;
             headPtr->setData(data);
@@ -91,30 +92,33 @@ void List::insertFirst(int data){
         }
     }
     */
-    
+
     if (headPtr == nullptr){
-            Node* newPtr = new Node(data, reciclaje);
-            headPtr = newPtr;
-            size++;
-        }
+        Node* newPtr = new Node(data);
+        headPtr = newPtr;
+        size++;
+    }
     else{
-        Node* newPtr = new Node(data, headPtr, reciclaje);
+        Node* newPtr = new Node(data, headPtr);
         headPtr = newPtr;
         size++;
     }
 
 }
 void List::deleteItem(int data){
+
     if (data == headPtr->data){
         Node* temp = headPtr;
         cout << "mem: " << headPtr << endl;
         headPtr = headPtr->nextPtr;
-        //delete(temp);
-        reciclaje->insertF(temp);
-        reciclaje->showCol();
+        delete(temp);
+        cout << "listo el delete" << endl;
+        //reciclaje->insertF(temp);
+
+        //reciclaje->showCol();
         size--;
-        
-        
+
+
     }
     else{
         Node* buscador = headPtr;
@@ -127,11 +131,12 @@ void List::deleteItem(int data){
         //cout << buscador->data << endl;
         prev->nextPtr = buscador->nextPtr; // prev->nextPtr = prev->nextPtr->nextPtr;
         cout << "mem: " << buscador << endl;
-        reciclaje->insertF(buscador);
-        reciclaje->showCol();
+        delete(buscador);
+        //reciclaje->insertF(buscador);
+        //reciclaje->showCol();
         size--;
     }
-    
+
 }
 void List::showList(){
     Node* temp;
@@ -146,4 +151,7 @@ void List::showList(){
         }
         cout << endl;
     }
+}
+void List::donda(){
+    cout << "kanye" << endl;
 }

@@ -1,8 +1,10 @@
-#include <iostream>
-#include <fstream>
+//
+// Created by esteban on 3/12/23.
+//
+
+#include "Collector.h"
 #include "List.h"
 #include "Node.h"
-#include "Collector.h"
 
 using namespace std;
 
@@ -32,7 +34,7 @@ Node* Collector::deleteF(){
         cHeadPtr = cHeadPtr->nextPtr;
         return tmp;
     }
-    
+
 }
 bool Collector::available(){
     if (cHeadPtr == nullptr){
